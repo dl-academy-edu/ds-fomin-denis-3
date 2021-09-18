@@ -1,0 +1,18 @@
+<form action="/contact" method="POST" class="form__sign-in">
+    <fieldset class="form__fieldset">
+        <div class="">
+            <label for="field_email" class="form__label">Email</label>
+            <input id="field_email" class="form__input" type="email" name="user_email">
+        </div>
+    </fieldset>
+    <fieldsetclass="form__fieldset">
+        <div>
+            <label for="">Password</label>
+            <input type="password">
+        </div>
+    </fieldset>
+    @@include('button/index.html', {
+        "text":"Submit",
+        "type":"submit"
+    })
+</form>

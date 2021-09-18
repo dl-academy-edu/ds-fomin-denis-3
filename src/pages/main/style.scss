@@ -1,0 +1,195 @@
+@import "../../components/vars";
+@import "../../components/mixins";
+
+.header {
+    &__logo {
+        padding-left: 10px;
+    }
+}
+
+.main {
+    &__section {
+        display: flex;
+        align-items: flex-end;
+        margin: 40px 0 0 0;
+        @media (max-width: 568px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &_title {
+            max-width: 280px;
+            margin: 0 40px 0 0;
+        }
+        &_description {
+            max-width: 229px;
+            margin: 0;
+            padding-bottom: 9px;
+            @media (max-width: 568px) {
+                width: 205px;
+            }
+        }
+    }
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $sand;
+    &__title {
+        margin: 60px 0 51px 0;
+    }
+    &__container {
+        max-width: 478px;
+        margin: 0 0 62px 0;
+    }
+    &__wrapper {
+        position: relative;
+        border: 2.5px solid $black;
+        margin: 0 0 40px 0;
+        right: 50px;
+        &::after{
+            position: absolute;
+            content: '';
+            display: block;
+            right: 35px;
+            bottom: -17.5px;
+            width: 30px;
+            height: 30px;
+            background-color: #f6f6f6;
+            border-bottom: 2.5px solid $black;
+            border-right: 2.5px solid $black;
+            transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+            left: 50px;
+            &::after {
+                left: 35px;
+            }
+        }
+    }
+    &__text {
+        padding: 15px;
+        margin: 0;
+
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+        margin: 60px 0 20px 0;
+    }
+    &__text {
+        @include font-size(18px,21px,500);
+        margin: 0 0 50px 0;
+    }
+    &__list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 0 64px 0;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__img {
+        margin: 0 0 20px 0;
+    }
+    &__description {
+        @include font-size(14px,17px,bold);
+        color: $gray;
+        margin: 0 0 28px 0;
+    }
+    &__progress {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        &_wrapper {
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        &_value {
+            display: block;
+            @include font-size(14px,17px,bold);
+            color: $gray;
+            text-align: center;
+            margin: 0 12px 0 0;
+        }
+        &_bg {
+            background: $mercury;
+            position: relative;
+            width: 142px;
+            height: 9px;
+            overflow: hidden;
+        }
+        &_bar {
+            overflow: hidden;
+            background: $black;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &_bar-html {
+            width: 121px;
+        }
+        &_bar-css {
+            width: 71px;
+        }
+        &_bar-js {
+            width: 31px;
+        }
+        &_bar-git {
+            width: 18px;
+        }
+        &_bar-figma {
+            width: 114px;
+        }
+    }
+}
+
+.portfolio {
+    background-color: $sand;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &__title {
+        margin: 60px 0 50px 0;
+
+    }
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: rgba(246, 246, 246, 0.99);
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+    &_open {
+        display: block;
+    }
+}
+
+.popup {
+    &__sign-in {
+        width: 370px;
+        &_close {
+            border: none;
+            background: transparent;
+        }
+    }
+
+}

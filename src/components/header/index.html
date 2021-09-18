@@ -1,0 +1,29 @@
+<header class="header container">
+  <a href="/" class="header__link_logo header__logo">Home</a>
+  <nav>
+      <ul class="header__nav dots_none">
+          <li>
+            <a href="/" class="header__link">My blog</a>
+          </li>
+          <li>
+            @@include('button/index.html', {
+              "type":"button",
+              "text": "Sign in"
+            })
+          </li>
+          <li>
+            @@include('button/index.html', {
+              "type":"button",
+              "text": "Register"
+            })
+          </li>
+          <li>
+            @@include('button/index.html', {
+              "class":"button_hidden",
+              "type":"button",
+              "text": "My profile"
+            })
+          </li>
+      </ul>
+  </nav>
+</header>

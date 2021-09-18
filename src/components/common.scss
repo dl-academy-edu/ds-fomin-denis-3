@@ -1,0 +1,87 @@
+@import "./vars";
+@import "./mixins";
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-style: normal;
+  @include font-size(18px,21px,normal);
+  color: $black;
+}
+
+img {
+  max-width: 100%;
+  display: block;   
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+h1 {
+  @include font-size(47px,57px,normal);
+}
+
+h2 {
+  @include font-size(34px,41px,bold);
+}
+
+h3 {
+  @include font-size(24px,29px,bold);
+}
+
+.hidden {
+  font-size: 0;
+  height: 0; 
+}
+
+.dots_none {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+// Подключение компонентов
+@import "./header/header";
+@import "./footer/footer";
+@import "./button/button";
+@import "./signInModal/signInModal";
+
+
+
+// Подключение шрифтов
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/gilroy-regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/gilroy-regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/gilroy-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/gilroy-regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/gilroy-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/gilroy-regular.svg#gilroy-regular') format('svg'); /* Chrome < 4, Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/gilroy-bold.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/gilroy-bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/gilroy-bold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/gilroy-bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/gilroy-bold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/gilroy-bold.svg#gilroy-bold') format('svg'); /* Chrome < 4, Legacy iOS */
+    font-weight: 700;
+    font-style: normal;
+}

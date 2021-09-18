@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link href="common.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../static/fonts/gilroy.css" />
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <title>Главная</title>
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+      <section class="main container">
+        <div class="main__section">
+          <h1 class="main__section_title">Antonina Antoninovna</h1>
+          <p class="main__section_description">Future front-end developer 23 years old, Tolyatti</p>
+        </div>
+        <div class="slider">
+
+        </div>
+      </section>
+      <section class="about">
+        <h2 class="about__title">About me</h2>
+        <div class="about__container">
+          <div class="about__wrapper">
+            <p class="about__text">Aliquam tortor molestie turpis est tristique. Congue diam orci amet quis semper ut. Vitae aenean nibh facilisis urna, ultricies euismod nunc. Commodo fringilla sit hendrerit consequat. Vel ac elit vel sagittis.</p>
+          </div>
+          <div class="about__wrapper">
+            <p class="about__text">Tincidunt id quis pellentesque rutrum pretium. Egestas aliquam dictum ipsum nisl, sed pulvinar. Commodo elit sed a fermentum non justo. Etiam platea consectetur.</p>
+          </div>
+          <div class="about__wrapper">
+            <p class="about__text">Quam ipsum odio tellus etiam aliquam dolor ut hendrerit. Felis risus nec vitae nunc ultricies placerat. Nullam nec felis eu id dolor pellentesque tristique. </p>
+          </div>
+        </div>
+        
+      </section>
+      <section class="skills container">
+        <h2 class="skills__title">Skills</h2>
+        <p class="skills__text">I work in such programs as</p>
+        <ul class="skills__list dots_none">
+          <li class="skills__item">
+            <img class="skills__img" src="../../static/images/skills/html5.svg" alt="html" width="79px" height="90px">
+            <span class="skills__description">HTML 5</span>
+            <div class="skills__progress">
+              <progress class="skills__progress_wrapper" max="100" value="0"></progress>
+              <div class="skills__progress_value">85%</div>
+              <div class="skills__progress_bg"><div class="skills__progress_bar skills__progress_bar-html"></div></div>
+            </div>
+          </li>
+          <li class="skills__item">
+            <img class="skills__img" src="../../static/images/skills/css3.svg" alt="css">
+            <span class="skills__description">CSS/SCSS</span>
+            <div class="skills__progress">
+              <progress class="skills__progress_wrapper" max="100" value="0"></progress>
+              <div class="skills__progress_value">55%</div>
+              <div class="skills__progress_bg"><div class="skills__progress_bar skills__progress_bar-css"></div></div>
+            </div>
+          </li>
+          <li class="skills__item">
+            <img class="skills__img" src="../../static/images/skills/js.svg" alt="js">
+            <span class="skills__description">JavaScript</span>
+            <div class="skills__progress">
+              <progress class="skills__progress_wrapper" max="100" value="0"></progress>
+              <div class="skills__progress_value">5%</div>
+              <div class="skills__progress_bg"><div class="skills__progress_bar skills__progress_bar-js"></div></div>
+            </div>
+          </li>
+          <li class="skills__item">
+            <img class="skills__img" src="../../static/images/skills/github.svg" alt="github">
+            <span class="skills__description">Git/GitHub</span>
+            <div class="skills__progress">
+              <progress class="skills__progress_wrapper" max="100" value="0"></progress>
+              <div class="skills__progress_value">15%</div>
+              <div class="skills__progress_bg"><div class="skills__progress_bar skills__progress_bar-git"></div></div>
+            </div>
+          </li>
+          <li class="skills__item">
+            <img class="skills__img" src="../../static/images/skills/figma.svg" alt="figma">
+            <span class="skills__description">Figma</span>
+            <div class="skills__progress">
+              <progress class="skills__progress_wrapper" max="100" value="0"></progress>
+              <div class="skills__progress_value">80%</div>
+              <div class="skills__progress_bg"><div class="skills__progress_bar skills__progress_bar-figma"></div></div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="portfolio">
+        <h2 class="portfolio__title">Portfolio</h2>
+      </section>
+    </main>
+    @@include('footer/index.html')
+    <div class="overlay"></div>
+    <div class="popup popup__sign-in">
+        <h2 class="hidden">Modal Window</h2>
+        <button class="popup__sign-in_close">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)" fill="#828282"/>
+            <rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)" fill="#828282"/>
+          </svg>
+        </button> 
+        @@include('signInModal/index.html')
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+.button {
+    @include font-size(18px,22px,normal);
+    border: none;
+    background-color: transparent;
+    color: $gray;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 20px;
+    transition: color $transition;
+    &:hover {
+        color: $black;
+    }
+    &_hidden {
+        display: none;
+    }
+}
