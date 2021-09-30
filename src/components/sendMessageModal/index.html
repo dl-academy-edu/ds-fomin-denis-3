@@ -1,0 +1,59 @@
+<div class="popup popup__send">
+    <h2 class="hidden">Modal Window</h2>
+    <button class="popup_close send_close">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)" fill="#828282"/>
+        <rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)" fill="#828282"/>
+      </svg>
+    </button>
+    <form action="/contact" method="POST" class="form__send">
+        <div class="send__column_double">
+            <div class="send__column_wrapper">
+                <div class="send__wrapper">
+                    <label for="send_name" class="form__send_label">What is your name?</label>
+                    <span class="send__required">*</span>
+                </div>
+                <input id="send_name" class="form__send_input" type="text" name="user_name" required>
+            </div>
+            <div class="send__column_wrapper">
+                <div class="send__wrapper">
+                    <label for="send_subject" class="form__send_label">Message subject</label>
+                    <span class="send__required">*</span>
+                </div>
+                <input id="send_subject" class="form__send_input" type="text" name="message_subject" required>
+            </div>
+        </div>
+        <div class="send__column_double">
+            <div class="send__column_wrapper">
+                <div class="send__wrapper">
+                    <label for="send_email" class="form__send_label">Your Email</label>
+                    <span class="send__required">*</span>
+                </div>
+                <input id="send_email" class="form__send_input" type="email" name="user_email" required>
+            </div>
+            <div class="send__column_wrapper">
+                <div class="send__wrapper">
+                    <label for="send_phone" class="form__send_label">Your mobile phone</label>
+                    <span class="send__required">*</span>
+                </div>
+                <input id="send_phone" class="form__send_input" type="tel" name="user_tel" required>
+            </div>
+        </div>
+        <div class="send__column">
+            <div class="send__wrapper">
+                <label for="field_message">What do you want to discuss with me?</label>
+            </div>
+            <textarea id="field_message" name="user_message" class="send__textarea" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <input id="check_input" type="checkbox" class="form__checkbox_input" name="consent to the processing of your personal data" required>
+            <label for="check_input" class="form__checkbox_label" tabindex="0">Clicking on the button, you consent to the processing of your personal data.</label>
+        </div>
+        @@include('button/index.html', {
+            "text":"Send",
+            "type":"submit",
+            "class":"button_send",
+            "disabled":"disabled"
+        })
+    </form>
+</div>

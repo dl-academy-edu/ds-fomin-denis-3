@@ -1,0 +1,126 @@
+.popup {
+    &__register {
+        max-width: 680px;
+        width: 100%;
+    }
+}
+
+.register {
+    &__column {
+        border: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+        max-width: 600px;
+        width: 100%;
+        &_double {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 20px 0;
+        }
+        &_wrapper {
+            margin: 0 0 6px 0;
+        }
+    }
+    &__wrapper {
+        max-width: 290px;
+        width: 100%;
+    }
+    &__required {
+        color: $required;
+    }
+}
+
+.form {
+    &__register {
+        border: 2.5px solid $black;
+        padding: 40px;
+        background-color: $white;
+        &_input {
+            width: 100%;
+            height: 50px;
+            border: 2.5px solid $mercury;
+            outline: none;
+            &:hover {
+                border: 2.5px solid $gray;
+            }
+            &:focus {
+                border: 2.5px solid $black;
+            }
+        }
+    }
+    &__checkbox {
+        &_input {
+        display: none;
+        }
+    }    
+    &__checkbox {
+        &_label {
+            position: relative;
+            padding: 0 0 0 38px;
+            color: $mercury;
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                border: 2px solid $mercury;
+                border-radius: 3px;
+                width: 17px;
+                height: 17px;
+                top: -3px;
+                left: 0;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                cursor: pointer;
+                width: 14px;
+                height: 14px;
+                background: (url(../../static/images/check.svg) no-repeat);
+                opacity: 0;
+                top: -1px;
+                left: 5px;
+            }
+            &:hover {
+                color: $gray;
+            }
+        }
+        &_input:checked + &_label:after,
+        &_label:before {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+.button {
+    &_register {
+        border: 2.5px solid $black;
+        border-radius: 30px;
+        padding: 10px 19px;
+        margin: 20px 0 0 0;
+        background-color: transparent;
+        color: $black;
+        @include font-size(18px,22px,bold);
+        transition: color $transition, background-color $transition;
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+        &:focus {
+            background-color: $black;
+            color: $white;
+        }
+        &:disabled {
+            border: 2.5px solid $mercury;
+            background-color: $white;
+            color: $mercury;
+            transition: color $transition, background-color $transition;
+            &:hover {
+                border: 2.5px solid $gray;
+                color: $gray;
+            }
+        }
+    }
+}

@@ -53,7 +53,7 @@
             content: '';
             display: block;
             right: 35px;
-            bottom: -17.5px;
+            bottom: -18px;
             width: 30px;
             height: 30px;
             background-color: #f6f6f6;
@@ -168,28 +168,31 @@
     }
 }
 
-.overlay {
-    width: 100%;
-    height: 100vh;
-    background: rgba(246, 246, 246, 0.99);
-    opacity: 0.8;
+
+
+.popup {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     display: none;
+    &_close {
+        position: absolute;
+        background: 0 0;
+        border: none;
+        cursor: pointer;
+        right: -41px;
+        top: -1px;
+        &:hover rect {
+            fill: $black;
+        }
+    }
     &_open {
         display: block;
     }
-}
-
-.popup {
-    &__sign-in {
-        width: 370px;
-        &_close {
-            border: none;
-            background: transparent;
+    &__overlay {
+        &_open {
+            display: block;
         }
     }
-
 }

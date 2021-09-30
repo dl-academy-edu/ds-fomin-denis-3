@@ -1,5 +1,5 @@
 .button {
-    @include font-size(18px,22px,normal);
+    @include font-size(18px,22px,700);
     border: none;
     background-color: transparent;
     color: $gray;
@@ -12,5 +12,30 @@
     }
     &_hidden {
         display: none;
+    }
+}
+
+.footer {
+    &__button {
+        border: 2.5px solid $black;
+        border-radius: 30px;
+        background-color: $black;
+        color: $white;
+        align-items: center;
+        padding: 10px 29px;
+        @include font-size(18px,22px,normal);
+        cursor: pointer;
+        transition: background-color $transition, color $transition;
+        margin: 0 0 40px 0;
+        &:hover {
+            border: 2.5px solid $black;
+            background-color: $white;
+            color: $black;
+        }
+        &:focus {
+            border: 2.5px solid $black;
+            background-color: $white;
+            color: $black;
+        }
     }
 }

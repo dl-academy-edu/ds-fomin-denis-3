@@ -1,18 +1,30 @@
-<form action="/contact" method="POST" class="form__sign-in">
-    <fieldset class="form__fieldset">
-        <div class="">
-            <label for="field_email" class="form__label">Email</label>
-            <input id="field_email" class="form__input" type="email" name="user_email">
+<div class="popup popup__sign">
+    <h2 class="hidden">Modal Window</h2>
+    <button class="popup_close">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)" fill="#828282"/>
+        <rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)" fill="#828282"/>
+      </svg>
+    </button>
+    <form action="/contact" method="POST" class="form__sign">
+        <div class="sign__column">
+            <div class="sign__column_wrapper">
+                <label for="sign_email" class="form__sign_label">Email</label>
+                <span class="sign__required">*</span>
+            </div>
+            <input id="sign_email" class="form__sign_input" type="email" name="user_email" required>
         </div>
-    </fieldset>
-    <fieldsetclass="form__fieldset">
-        <div>
-            <label for="">Password</label>
-            <input type="password">
+        <div class="sign__column">
+            <div class="sign__column_wrapper">
+                <label for="sign_password" class="form__sign_label">Password</label>
+                <span class="sign__required">*</span>
+            </div>
+            <input id="signpassword" class="form__sign_input" type="password" name="user_password" required>
         </div>
-    </fieldset>
-    @@include('button/index.html', {
-        "text":"Submit",
-        "type":"submit"
-    })
-</form>
+        @@include('button/index.html', {
+            "text":"Log in",
+            "type":"submit",
+            "class":"button_sign-in"
+        })
+    </form>
+</div>
