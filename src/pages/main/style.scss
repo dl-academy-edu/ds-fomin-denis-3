@@ -168,31 +168,3 @@
     }
 }
 
-
-
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: none;
-    &_close {
-        position: absolute;
-        background: 0 0;
-        border: none;
-        cursor: pointer;
-        right: -41px;
-        top: -1px;
-        &:hover rect {
-            fill: $black;
-        }
-    }
-    &_open {
-        display: block;
-    }
-    &__overlay {
-        &_open {
-            display: block;
-        }
-    }
-}

@@ -1,0 +1,37 @@
+@import "../../components/vars";
+@import "../../components/mixins";
+
+.profile {
+    &__title {
+        margin: 40px 0 40px 0;
+    }
+    &__info {
+        display: flex;
+    }
+    &__img {
+        min-width: 320px;
+        min-height: 450px;
+        background: $sand url(../../static/images/no-photo.svg) no-repeat center;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        margin: 0 105px 0 0;
+    }
+    &__data {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__item {
+        @include font-size(18px,22px,700);
+        margin: 0 0 20px 0;
+        &:last-child {
+            margin: 0 0 30px 0;
+        }
+        &_wrapper {
+            @include font-size(18px,21px,500);
+            margin: 0 0 0 15px;
+        }
+    }
+    &__button {
+        margin: 0 0 20px 0;
+    }
+}

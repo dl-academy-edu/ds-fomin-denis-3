@@ -1,7 +1,11 @@
 <footer class="footer">
   <h2 class="footer__title">Contacts</h2>
   <p class="footer__description">Want to know more or just chat?You are welcome!</p>
-  <button type="button" class="footer__button button_send-js">Send message</button>
+  @@include('button/index.html', {
+    "class":"button__black button_send-js",
+    "type":"button",
+    "text": "Send message"
+  })
   <ul class="footer__social dots_none">
     <li class="footer__social_item"><a href="#" class="footer__link">Instagram</a></li>
     <li class="footer__social_item"><a href="#" class="footer__link">Vk</a></li>

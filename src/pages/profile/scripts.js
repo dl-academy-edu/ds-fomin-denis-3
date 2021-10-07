@@ -36,7 +36,7 @@ if ($signInForm) {
         
         const formData = new FormData($signInForm);
         let formValues = {};
-        
+
         formData.forEach((value, name) => {
             formValues[name] = value;
         });
@@ -71,7 +71,6 @@ window.addEventListener('keydown', (event) => {
 });
 
 
-
 // получение данных из формы registration
 const $regForm = document.querySelector('.form__register-in')
 
@@ -90,40 +89,40 @@ if ($regForm) {
 
 
 
-// form send message
-let popupOpenSend = document.querySelector('.button_send-js');
-let popupFormSend = document.querySelector('.popup__send');
-let popupCloseSend = document.querySelector('.send_close');
-let inputSend = popupFormSend.querySelector('input');
+// form change-password
+let popupChangePassOpen= document.querySelector('.change-pass-js');
+let popupChangePassForm = document.querySelector('.popup__change-pass');
+let popupChangePassClose = document.querySelector('.change-pass_close');
+let inputChangePass = popupChangePassForm.querySelector('input');
 
-popupOpenSend.addEventListener('click', () => {
-    popupFormSend.classList.add('popup_open');
+popupChangePassOpen.addEventListener('click', () => {
+    popupChangePassForm.classList.add('popup_open');
     popupOverlay.classList.add('overlay_open');
-    inputSend.focus();
+    inputChangePass.focus();
 });
 
-popupCloseSend.addEventListener('click', () => {
-    popupFormSend.classList.remove('popup_open');
+popupChangePassClose.addEventListener('click', () => {
+    popupChangePassForm.classList.remove('popup_open');
     popupOverlay.classList.remove('overlay_open');
 });
 
 window.addEventListener('keydown', (event) => {
     if(event.code === 'Escape') {
-        popupFormSend.classList.remove('popup_open');
+        popupChangePassForm.classList.remove('popup_open');
         popupOverlay.classList.remove('overlay_open');
     }
 });
 
 
 
-// получение данных из формы send messages
-const $sendMessageForm = document.querySelector('.form__send-message')
+// получение данных из формы form change-password
+const $changePassForm = document.querySelector('.form__change-pass')
 
-if ($sendMessageForm) {
-    $sendMessageForm.addEventListener('submit', (event) => {
+if ($changePassForm) {
+    $changePassForm.addEventListener('submit', (event) => {
         event.preventDefault();
         
-        const formData = new FormData($sendMessageForm);
+        const formData = new FormData($changePassForm);
         let formValues = {};
 
         formData.forEach((value, name) => {
@@ -134,21 +133,44 @@ if ($sendMessageForm) {
 
 
 
-// scroll top
-let button = document.querySelector(".button-scroll_js");
+// form change-data
+let popupChangeDataOpen= document.querySelector('.change-data-js');
+let popupChangeDataForm = document.querySelector('.popup__change-data');
+let popupChangeDataClose = document.querySelector('.change-data_close');
+let inputChangeData = popupChangeDataForm.querySelector('input');
 
-button.addEventListener('click', () => {
-    window.scrollTo({ 
-        top: 0, 
-        behavior: "smooth" 
-    });
+popupChangeDataOpen.addEventListener('click', () => {
+    popupChangeDataForm.classList.add('popup_open');
+    popupOverlay.classList.add('overlay_open');
+    inputChangeData.focus();
 });
 
-window.addEventListener('scroll', function () {
-    if (window.pageYOffset > 500) {
-    button.classList.remove("buttonToTop_hidden");
-    } else {
-    button.classList.add("buttonToTop_hidden");
+popupChangeDataClose.addEventListener('click', () => {
+    popupChangeDataForm.classList.remove('popup_open');
+    popupOverlay.classList.remove('overlay_open');
+});
+
+window.addEventListener('keydown', (event) => {
+    if(event.code === 'Escape') {
+        popupChangeDataForm.classList.remove('popup_open');
+        popupOverlay.classList.remove('overlay_open');
     }
 });
 
+
+
+// получение данных из формы form change-data
+const $changeDataForm = document.querySelector('.form__change-data')
+
+if ($changeDataForm) {
+    $changeDataForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        
+        const formData = new FormData($changeDataForm);
+        let formValues = {};
+
+        formData.forEach((value, name) => {
+            formValues[name] = value;
+        });
+    });
+}

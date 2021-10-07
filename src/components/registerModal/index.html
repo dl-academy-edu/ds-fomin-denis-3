@@ -6,60 +6,60 @@
         <rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)" fill="#828282"/>
       </svg>
     </button>
-    <form action="/contact" method="POST" class="form__register">
-        <div class="register__column">
-            <div class="register__column_wrapper">
-                <label for="register_email" class="form__register_label">Email</label>
-                <span class="register__required">*</span>
+    <form action="https://echo.htmlacademy.ru" method="get" class="form form__register">
+        <div class="form__column register__column">
+            <div class="form_wrapper">
+                <label for="register_email" class="form__label">Email</label>
+                <span class="form__required">*</span>
             </div>
-            <input id="register_email" class="form__register_input" type="email" name="user_email" required>
+            <input id="register_email" class="form__input" type="email" name="user_email" required>
         </div>
-        <div class="register__column_double">
-            <div class="register__wrapper">
-                <div class="register__column_wrapper">
-                    <label for="register_name" class="form__register_label">Name</label>
-                    <span class="register__required">*</span>
+        <div class="form__column_double">
+            <div class="form__column">
+                <div class="form__wrapper">
+                    <label for="register_name" class="form__label">Name</label>
+                    <span class="form__required">*</span>
                 </div>
-                <input id="register_name" class="form__register_input" type="name" name="user_name" required>
+                <input id="register_name" class="form__input" type="text" name="user_name" required>
             </div>
-            <div class="register__wrapper">
-                <div class="register__column_wrapper">
-                    <label for="register_surname" class="form__register_label">Surname</label>
-                    <span class="register__required">*</span>
+            <div class="form__column">
+                <div class="form__wrapper">
+                    <label for="register_surname" class="form__label">Surname</label>
+                    <span class="form__required">*</span>
                 </div>
-                <input id="register_surname" class="form__register_input" type="surname" name="user_surname" required>
-            </div>
-        </div>
-        <div class="register__column_double">
-            <div class="register__wrapper">
-                <div class="register__column_wrapper">
-                    <label for="register_password" class="form__register_label">Password</label>
-                    <span class="register__required">*</span>
-                </div>
-                <input id="register_password" class="form__register_input" type="password" name="user_password" required>
-            </div>
-            <div class="register__wrapper">
-                <div class="register__column_wrapper">
-                    <label for="register_repeat-password" class="form__register_label">Repeat password</label>
-                    <span class="register__required">*</span>
-                </div>
-                <input id="register_repeat-password" class="form__register_input" type="password" name="user_repeat-password" required>
+                <input id="register_surname" class="form__input" type="text" name="user_surname" required>
             </div>
         </div>
-        <div class="register__column_double">
-            <div class="register__wrapper">
-                <div class="register__column_wrapper">
-                    <label for="register_location" class="form__register_label">Location</label>
-                    <span class="register__required">*</span>
+        <div class="form__column_double">
+            <div class="form__column">
+                <div class="form__wrapper">
+                    <label for="register_password" class="form__label">Password</label>
+                    <span class="form__required">*</span>
                 </div>
-                <input id="register_location" class="form__register_input" type="location" name="user_location" required>
+                <input id="register_password" class="form__input" type="password" name="user_password" required>
             </div>
-            <div class="register__wrapper">
-                <div class="register__column_wrapper">
-                    <label for="register_age" class="form__register_label">Age</label>
-                    <span class="register__required">*</span>
+            <div class="form__column">
+                <div class="form__wrapper">
+                    <label for="register_repeat-password" class="form__label">Repeat password</label>
+                    <span class="form__required">*</span>
                 </div>
-                <input id="register_age" class="form__register_input" type="number" name="user_age" required>
+                <input id="register_repeat-password" class="form__input" type="password" name="user_repeat-password" required>
+            </div>
+        </div>
+        <div class="form__column_double">
+            <div class="form__column">
+                <div class="form__wrapper">
+                    <label for="register_location" class="form__label">Location</label>
+                    <span class="form__required">*</span>
+                </div>
+                <input id="register_location" class="form__input" type="text" name="user_location" required>
+            </div>
+            <div class="form__column">
+                <div class="form__wrapper">
+                    <label for="register_age" class="form__label">Age</label>
+                    <span class="form__required">*</span>
+                </div>
+                <input id="register_age" class="form__input" type="number" name="user_age" required>
             </div>
         </div>
         <div>
@@ -69,7 +69,7 @@
         @@include('button/index.html', {
             "text":"Sign up",
             "type":"submit",
-            "class":"button_register",
+            "class":"button__form",
             "disabled":"disabled"
         })
     </form>
