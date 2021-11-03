@@ -5,40 +5,30 @@
     align-items: center;
     padding-top: 33px;
     padding-bottom: 32px;
+
     &:after {
-        position: absolute;
         content: '';
         display: block;
+        position: absolute;
         bottom: 0;
         height: 1px;
         background-color: $gray;
         max-width: 1000px;
         width: 100%;
     }
-    &__link {
-        color: $gray;
-        @include font-size(18px,21px,bold);
+
+    &__logo {
+        color: $black;
+        font-weight: bold;
+        outline: none;
         transition: color $transition;
-        display: block;
-        margin-bottom: 1px;
-        &:hover {
-            color: $black;
-        }
+
+        &:hover,
         &:focus {
-            color: $black;
-        }
-        &_logo {
-            @include font-size(18px,21px,bold);
-            color: $black;
-            transition: color $transition;
-            &:hover {
-                color: $gray;
-            }
-            &:focus {
-                color: $gray;
-            }
+            color: $gray;
         }
     }
+
     &__nav {
         display: flex;
         flex-direction: row;
@@ -46,11 +36,12 @@
         flex-wrap: wrap;
         align-items: center;
     }
+    
     &__item {
         margin: 0 0 0 20px;
-        &_hidden {
-            display: none;
-        }
+        // &_hidden {
+        //     display: none;
+        // }
     }
 }
 

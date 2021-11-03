@@ -9,7 +9,7 @@ if (age >= 18) {
     console.log('успешно');
 } else {
     getAge();
-  }
+	}
 } 
 getAge();
 

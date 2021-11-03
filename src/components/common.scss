@@ -1,214 +1,79 @@
-@import "./vars";
-@import "./mixins";
+@import "./variables";
+@import "./normalize";
 
-
-* {
-  box-sizing: border-box;
+html {
+	box-sizing: border-box;
+}
+  
+*, 
+*::before, 
+*::after {
+	box-sizing: inherit;
 }
 
 body {
-  font-family: "Gilroy", "Arial", sans-serif;
-  font-style: normal;
-  @include font-size(18px,21px,normal);
-  color: $black;
+  	font-family: "Gilroy", $default-sans-serif;
+	font-style: normal;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: calc(21 / 18);
+	color: $black;
 }
 
 img {
-  max-width: 100%;
-  display: block;   
+	display: block; 
+	max-width: 100%;
 }
 
 a {
-  text-decoration: none;
-  color: $black;
+	text-decoration: none;
+	color: $black;
 }
 
 h1 {
-  @include font-size(47px,57px,bold);
+	font-size: 47px;
+	font-weight: bold;
+	line-height: calc(57 / 47);
 }
 
 h2 {
-  @include font-size(34px,41px,bold);
+	font-size: 34px;
+	font-weight: bold;
+	line-height: calc(41 / 34);
 }
 
 h3 {
-  @include font-size(24px,29px,bold);
+	font-size: 24px;
+	font-weight: bold;
+	line-height: calc(29 / 24);
 }
 
-.hidden {
-  font-size: 0;
-  height: 0; 
+.common-no-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
-.dots_none {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.container {
-  max-width: 1040px;
-  padding: 0 20px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-
-label {
-  @include font-size(14px,16px,500);
-}
-
-input, button {
-  cursor: pointer;
-}
-
-input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: none;
-    &_close {
-        position: absolute;
-        background: 0 0;
-        border: none;
-        cursor: pointer;
-        right: -41px;
-        top: -1px;
-        &:hover rect {
-            fill: $black;
-        }
-    }
-    &_open {
-        display: block;
-    }
-}
-
-.form {
-    border: 2.5px solid $black;
-    padding: 40px;
-    background-color: $white;
-    &__input {
-        width: 100%;
-        height: 50px;
-        border: 2.5px solid $mercury;
-        outline: none;
-        padding: 14px;
-        &:hover {
-            border: 2.5px solid $gray;
-        }
-        &:focus {
-            border: 2.5px solid $black;
-        }
-        &_file {
-            width: 0.1px;
-            height: 0.1px;
-            opacity: 0;
-            overflow: hidden;
-            position: absolute;
-            z-index: -1;
-        }
-    }
-    &__label {
-        &_file {
-            max-width: 290px;
-            width: 100%;
-            height: 50px;
-            border: 2.5px solid $mercury;
-            outline: none;
-            padding: 14px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            &:hover {
-                border: 2.5px solid $gray;
-            }
-            &:focus {
-                border: 2.5px solid $black;
-            }
-        }
-    }
-    &__textarea {
-        width: 100%;
-        height: 150px;
-        border: 2.5px solid $mercury;
-        resize: none;
-        outline: none;
-        margin: 0 0 10px 0;
-        &:hover {
-            border: 2.5px solid $gray;
-        }
-        &:focus {
-            border: 2.5px solid $black;
-        }
-    }
-    &__checkbox {
-        &_input {
-        display: none;
-        }
-    }    
-    &__checkbox {
-        &_label {
-        position: relative;
-        padding: 0 0 0 38px;
-        color: $mercury;
-        &::before {
-            content: '';
-            position: absolute;
-            display: block;
-            border: 2px solid $mercury;
-            border-radius: 3px;
-            width: 17px;
-            height: 17px;
-            top: -3px;
-            left: 0;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            display: block;
-            cursor: pointer;
-            width: 14px;
-            height: 14px;
-            background: (url(../../static/images/check.svg) no-repeat);
-            opacity: 0;
-            top: -1px;
-            left: 5px;
-        }
-        &:hover {
-            color: $gray;
-        }
-    }
-    &_input:checked + &_label:after,
-    &_label:before {
-        opacity: 1;
-    }
-    }
-    &__column {
-        border: none;
-        padding: 0;
-        margin: 0 0 20px;
-        max-width: 290px;
-        width: 100%;
-        &_double {
-        display: flex;
-        justify-content: space-between;
-        }
-    }
-    &__wrapper {
-        margin: 0 0 6px 0;
-    }
-    &__required {
-        color: $required;
-    }
+.common-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    outline: 0;
+    outline-offset: 0;
 }
 
 
 // Подключение компонентов
+
+@import "./css/container";
+@import "./css/popupAndForm";
 @import "./header/header";
 @import "./footer/footer";
 @import "./button/button";
@@ -219,31 +84,12 @@ input[type=number]::-webkit-inner-spin-button {
 @import "./buttonToTop/buttonToTop";
 @import "./changePasswordModal/changePasswordModal";
 @import "./changeDataModal/changeDataModal";
+@import "./Filter/Filter";
+@import "./Pagination/Pagination";
+@import "./Posts/Posts";
+@import "./404/404";
+@import "./preloader/preloader"
 
 
 
 
-// Подключение шрифтов
-@font-face {
-	font-family: 'Gilroy';
-	src: url('../fonts/gilroy-regular.eot'); /* IE 9 Compatibility Mode */
-	src: url('../fonts/gilroy-regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('../fonts/gilroy-regular.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/gilroy-regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('../fonts/gilroy-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('../fonts/gilroy-regular.svg#gilroy-regular') format('svg'); /* Chrome < 4, Legacy iOS */
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-	font-family: 'Gilroy';
-	src: url('../fonts/gilroy-bold.eot'); /* IE 9 Compatibility Mode */
-	src: url('../fonts/gilroy-bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('../fonts/gilroy-bold.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/gilroy-bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('../fonts/gilroy-bold.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('../fonts/gilroy-bold.svg#gilroy-bold') format('svg'); /* Chrome < 4, Legacy iOS */
-    font-weight: 700;
-    font-style: normal;
-}

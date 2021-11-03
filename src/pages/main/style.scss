@@ -1,34 +1,102 @@
-@import "../../components/vars";
-@import "../../components/mixins";
+@import "../../components/variables";
+@import "../../components/common.scss";
 
 .header {
+
     &__logo {
         padding-left: 10px;
     }
 }
 
 .main {
+
     &__section {
         display: flex;
         align-items: flex-end;
-        margin: 40px 0 0 0;
+        margin: 40px 0 36px;
+
         @media (max-width: 568px) {
             flex-direction: column;
             align-items: flex-start;
         }
-        &_title {
-            max-width: 280px;
-            margin: 0 40px 0 0;
-        }
-        &_description {
-            max-width: 229px;
-            margin: 0;
-            padding-bottom: 9px;
-            @media (max-width: 568px) {
-                width: 205px;
-            }
+    }
+
+    &__title {
+        max-width: 280px;
+        margin: 0 40px 0 0;
+    }
+
+    &__description {
+        max-width: 229px;
+        margin: 0;
+        padding-bottom: 9px;
+
+        @media (max-width: 568px) {
+            width: 205px;
         }
     }
+}
+
+.slider {
+    margin: 0 auto 60px;
+
+    &__wrapper {
+        overflow: hidden;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 30px;
+    }
+
+    &__slide {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none; 
+
+        &:hover, 
+        &:focus {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    }
+
+
+    &__dot {
+        width: 10px;
+        height: 10px;
+        background-color: $mercury;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        transition: background-color .4s;
+
+        &:not(:last-child) {
+            margin-right: 7px;
+        }
+        
+        &:hover {
+            background-color: $gray;
+        }
+
+        &_active {
+          background-color: $black;
+        }
+        
+      }
 }
 
 .about {
@@ -36,24 +104,26 @@
     flex-direction: column;
     align-items: center;
     background-color: $sand;
+
     &__title {
-        margin: 60px 0 51px 0;
+        margin: 60px 0 51px;
     }
     &__container {
         max-width: 478px;
-        margin: 0 0 62px 0;
+        margin: 0 0 62px;
     }
     &__wrapper {
         position: relative;
         border: 2.5px solid $black;
-        margin: 0 0 40px 0;
+        margin: 0 0 40px;
         right: 50px;
+
         &::after{
             position: absolute;
             content: '';
             display: block;
             right: 35px;
-            bottom: -18px;
+            bottom: -17px;
             width: 30px;
             height: 30px;
             background-color: #f6f6f6;
@@ -61,13 +131,16 @@
             border-right: 2.5px solid $black;
             transform: rotate(45deg);
         }
+
         &:nth-child(2) {
             left: 50px;
+
             &::after {
                 left: 35px;
             }
         }
     }
+
     &__text {
         padding: 15px;
         margin: 0;
@@ -79,79 +152,101 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     &__title {
         margin: 60px 0 20px 0;
     }
+
     &__text {
-        @include font-size(18px,21px,500);
-        margin: 0 0 50px 0;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: calc(21 / 18);
+        margin: 0 0 50px;
     }
+
     &__list {
         width: 100%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin: 0 0 64px 0;
+        margin: 0 0 64px;
     }
+
     &__item {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     &__img {
-        margin: 0 0 20px 0;
+        margin: 0 0 20px;
     }
+
     &__description {
-        @include font-size(14px,17px,bold);
+        font-size: 14px;
+        font-weight: bold;
+        line-height: calc(17 / 14);
         color: $gray;
         margin: 0 0 28px 0;
     }
+
     &__progress {
         position: relative;
         overflow: hidden;
         display: flex;
         align-items: center;
-        &_wrapper {
-            position: absolute;
-            width: 0;
-            height: 0;
-            overflow: hidden;
-        }
-        &_value {
-            display: block;
-            @include font-size(14px,17px,bold);
-            color: $gray;
-            text-align: center;
-            margin: 0 12px 0 0;
-        }
-        &_bg {
-            background: $mercury;
-            position: relative;
-            width: 142px;
-            height: 9px;
-            overflow: hidden;
-        }
-        &_bar {
-            overflow: hidden;
-            background: $black;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        &_bar-html {
+    }
+
+    &__progress-wrapper {
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    &__progress-value {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: calc(17 / 14);
+        color: $gray;
+        text-align: center;
+        margin: 0 12px 0;
+    }
+
+    &__progress-bg {
+        background: $mercury;
+        position: relative;
+        width: 142px;
+        height: 9px;
+        overflow: hidden;
+    }
+
+    &__progress-bar {
+        overflow: hidden;
+        background: $black;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &_html {
             width: 121px;
         }
-        &_bar-css {
+
+        &_css {
             width: 71px;
         }
-        &_bar-js {
+
+        &_js {
             width: 31px;
         }
-        &_bar-git {
+
+        &_git {
             width: 18px;
         }
-        &_bar-figma {
+
+        &_figma {
             width: 114px;
         }
     }
@@ -162,9 +257,56 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    
     &__title {
-        margin: 60px 0 50px 0;
+        margin: 60px 0 50px;
 
     }
-}
 
+    &__swiper {
+        width: 1000px;
+        height: 604px;
+        margin: 0 0 60px;
+        position: relative;
+    }
+
+    &__swiper-button {
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
+
+        &:after {
+            color: $black;
+        }
+    }
+
+    &__banner {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: $black;
+        height: 150px;
+        opacity: .85;
+        z-index: 1;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__link {
+        border-bottom: 1px dashed $white;
+        color: $white;
+
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid $white;
+        }
+    }
+
+    &__description {
+        max-width: 40%;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+}

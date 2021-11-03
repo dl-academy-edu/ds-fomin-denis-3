@@ -3,13 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link href="/common.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../static/fonts/gilroy.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../../static/fonts/gilroy.css"/>
     <link rel="shortcut icon" href="/static/images/favicon.ico">
     <title>Главная</title>
   </head>
@@ -17,39 +12,36 @@
     @@include('header/index.html')
     <main class="container">
       <section class="profile">
-          <div class="profile__title">
-            <h1>My profile</h1>
+        <h1 class="profile__title">My profile</h1>
+        <div class="profile__info">
+          <div class="profile__img">
           </div>
-          <div class="profile__info">
-            <div class="profile__img">
-            </div>
-            <div class="profile__data">
-                <ul class="profile__items dots_none">
-                    <li class="profile__item">Name: <span class="profile__item_wrapper">Oksana</span></li>
-                    <li class="profile__item">Surname: <span class="profile__item_wrapper">Larioshkina</span></li>
-                    <li class="profile__item">Email: <span class="profile__item_wrapper">larioshkina@gmail.com</span></li>
-                    <li class="profile__item">Password: <span class="profile__item_wrapper">**********</span></li>
-                    <li class="profile__item">Location: <span class="profile__item_wrapper">Tolyatti</span></li>
-                    <li class="profile__item">Age: <span class="profile__item_wrapper">23</span></li>
-                </ul>
-                @@include('button/index.html', {
-                    "class":"button profile__button change-pass-js",
-                    "type":"button",
-                    "text": "Change password"
-                })
-                @@include('button/index.html', {
-                    "class":"button profile__button change-data-js",
-                    "type":"button",
-                    "text": "Change other data"
-                })
-                @@include('button/index.html', {
-                    "class":"button",
-                    "type":"button",
-                    "text": "Delete account"
-                })
-            </div>
+          <div class="profile__data">
+              <ul class="profile__items common-no-list">
+                  <li class="profile__item">Name: <span class="profile__wrapper">Oksana</span></li>
+                  <li class="profile__item">Surname: <span class="profile__wrapper">Larioshkina</span></li>
+                  <li class="profile__item">Email: <span class="profile__wrapper">larioshkina@gmail.com</span></li>
+                  <li class="profile__item">Password: <span class="profile__wrapper">**********</span></li>
+                  <li class="profile__item">Location: <span class="profile__wrapper">Tolyatti</span></li>
+                  <li class="profile__item">Age: <span class="profile__wrapper">23</span></li>
+              </ul>
+              @@include('button/index.html', {
+                  "class":"button button_profile button_change-pass-js",
+                  "type":"button",
+                  "text": "Change password"
+              })
+              @@include('button/index.html', {
+                  "class":"button button_profile button_change-data-js",
+                  "type":"button",
+                  "text": "Change other data"
+              })
+              @@include('button/index.html', {
+                  "class":"button",
+                  "type":"button",
+                  "text": "Delete account"
+              })
           </div>
-          
+        </div>
       </section>
     </main>
     @@include('overlay/index.html')
@@ -58,5 +50,6 @@
     @@include('changePasswordModal/index.html')
     @@include('changeDataModal/index.html')
     <script src="scripts.js"></script>
+    <script src="forms.js"></script>
   </body>
 </html>

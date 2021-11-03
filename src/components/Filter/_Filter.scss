@@ -1,0 +1,250 @@
+.filter {
+    
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 35px;
+
+        &_footer {
+            margin: 0 0 20px;
+        }
+    }
+
+    &__fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__legend {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: calc(16 / 14);
+        margin: 0 0 10px;
+
+        &_wrapper {
+            color: $mercury;
+            text-align: center;
+        }
+    }
+
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        width: 120px;
+    }
+
+    &__label {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: calc(21 / 18);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px;
+
+        &_tag {
+            margin: 0;
+        }
+        
+    }
+    
+
+    &__input-radio {
+        position: relative;
+        border: 3px solid $mercury;
+        width: 25px;
+        height: 25px;
+        border-radius: 30px;
+        margin: 0 12px 0 0;
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 3px;
+            left: 3px;
+            background-color: $mercury;
+            width: 13px;
+            height: 13px;
+            border-radius: 30px;
+        }
+    }
+
+    &__input-checkbox {
+        position: relative;
+        border: 3px solid $mercury;
+        width: 25px;
+        height: 25px;
+        border-radius: 5px;
+        margin: 0 12px 0 0;
+        user-select: none;
+
+        &_tags {
+            margin: 0 5px 5px 0;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 15px;
+            height: 15px;
+            top: 2px;
+            left: 2px;
+            background: url(../../static/images/check.svg) no-repeat;
+            opacity: 0;
+        }
+
+        &_1 {
+            border: 3px solid $navy-blue;
+
+            &:before {
+                background: url(../../static/images/tags-check/check-navy-blue.svg) no-repeat;
+            }
+        }
+
+        &_2 {
+            border: 3px solid $blue;
+
+            &:before {
+                background: url(../../static/images/tags-check/check-blue.svg) no-repeat;
+            }
+        }
+
+        &_3 {
+            border: 3px solid $yellow;
+
+            &:before {
+                background: url(../../static/images/tags-check/check-yellow.svg) no-repeat;
+            }
+        }
+
+        &_4 {
+            border: 3px solid $turquoise;
+
+            &:before {
+                background: url(../../static/images/tags-check/check-turquoise.svg) no-repeat;
+            }
+        }
+
+        &_5 {
+            border: 3px solid $orange;
+
+            &:before {
+                background: url(../../static/images/tags-check/check-orange.svg) no-repeat;
+            }
+        }
+
+        &_6 {
+            border: 3px solid $dusty-pink;
+
+            &:before {
+                background: url(../../static/images/tags-check/check-dusty-pink.svg) no-repeat;
+            }
+        }
+
+        &_7 {
+            border: 3px solid $purple;
+
+            &:before {
+                background: url(../../static/images/tags-check/check-purple.svg) no-repeat;
+            }
+        }
+
+        &_8 {
+            border: 3px solid $green;
+
+            &:before {
+                background: url(../../static/images/tags-check/check-green.svg) no-repeat;
+            }
+        }
+    }
+
+    &__input {
+        display: none;
+    } 
+
+    &__input-search {
+        width: 87%;
+        height: 50px;
+        border: 2px solid $mercury;
+        outline: none;
+        padding: 14px;
+
+        &:hover {
+            cursor: pointer;
+            border: 2px solid $gray;
+        }
+
+        &:focus {
+            border: 2px solid $black;
+        }
+    }
+    &__input:checked + &__input-checkbox_black {
+        border: 3px solid $black;
+        opacity: 1;
+    }  
+
+    &__input:checked + &__input-checkbox {
+        border: 3px solid inherit;
+        opacity: 1;
+    }    
+
+    &__input:checked + &__input-checkbox:before {
+        opacity: 1;
+    }
+
+    &__input:checked + &__input-radio:before {
+        background-color: $black;
+    }
+
+    &__input:checked + &__input-radio {
+        border: 3px solid $black;
+    }
+
+    &__input:checked + &__input-checkbox_navy-blue {
+        border: 3px solid $navy-blue;
+        opacity: 1;
+    }
+
+    &__input:checked + &__input-checkbox_blue {
+        border: 3px solid $blue;
+        opacity: 1;
+    }
+
+    &__input:checked + &__input-checkbox_yellow {
+        border: 3px solid $yellow;
+        opacity: 1;
+    }
+
+    &__input:checked + &__input-checkbox_turquoise {
+        border: 3px solid $turquoise;
+        opacity: 1;
+    }
+
+    &__input:checked + &__input-checkbox_orange {
+        border: 3px solid $orange;
+        opacity: 1;
+    }
+
+    &__input:checked + &__input-checkbox_dusty-pink {
+        border: 3px solid $dusty-pink;
+        opacity: 1;
+    }
+
+    &__input:checked + &__input-checkbox_purple {
+        border: 3px solid $purple;
+        opacity: 1;
+    }
+
+    &__input:checked + &__input-checkbox_green {
+        border: 3px solid $green;
+        opacity: 1;
+    }
+}

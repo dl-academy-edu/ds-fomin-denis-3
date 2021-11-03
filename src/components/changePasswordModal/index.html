@@ -1,37 +1,34 @@
-<div class="popup popup__change-pass">
-    <h2 class="hidden">Modal Window</h2>
-    <button class="popup_close change-pass_close">
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<div class="popup popup_change-pass">
+    <h2 class="common-visually-hidden">Modal Window</h2>
+    <button class="popup_close popup_close-change-pass-js">
+      <svg width="26" height="26">
         <rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)" fill="#828282"/>
         <rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)" fill="#828282"/>
       </svg>
     </button>
-    <form action="https://echo.htmlacademy.ru" method="get" class="form form__change-pass">
-        <div class="form__column">
-            <div class="form__wrapper">
-                <label for="change__password_old" class="form__label">Old password</label>
-                <span class="form__required">*</span>
+    <form action="https://echo.htmlacademy.ru" method="get" class="form form_change-pass-js">
+        <div class="form__fieldset">
+            <div class="form__column">
+                <label for="change__password_old" class="form__label">Old password<span class="form__required"> *</span></label>
+                <input id="change__password_old" class="form__input" type="password" name="password" required>
             </div>
-            <input id="change__password_old" class="form__input" type="password" name="old_password" required>
         </div>
-        <div class="form__column">
-            <div class="form__wrapper">
-                <label for="change__password_new" class="form__label">New password</label>
-                <span class="form__required">*</span>
+        <div class="form__fieldset">
+            <div class="form__column">
+                <label for="change__password_new" class="form__label">New password<span class="form__required"> *</span></label>
+                <input id="change__password_new" class="form__input" type="password" name="password" required>
             </div>
-            <input id="change__password_new" class="form__input" type="password" name="new_password" required>
         </div>
-        <div class="form__column">
-            <div class="form__wrapper">
-                <label for="change__password_repeat" class="form__label">Repeat new password</label>
-                <span class="form__required">*</span>
+        <div class="form__fieldset">
+            <div class="form__column">
+                <label for="change__password_repeat" class="form__label">Repeat new password<span class="form__required"> *</span></label>
+                <input id="change__password_repeat" class="form__input" type="password" name="password" required>
             </div>
-            <input id="change__password_repeat" class="form__input" type="password" name="repeat_new_password" required>
         </div>
         @@include('button/index.html', {
             "text":"Change password",
             "type":"submit",
-            "class":"button__form"
+            "class":"button button_form"
         })
     </form>
 </div>

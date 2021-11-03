@@ -1,26 +1,28 @@
 <header class="header container">
-  <a href="/" class="header__link_logo @@class">Home</a>
+  <a href="/" class="header__logo">Home</a>
   <nav>
-      <ul class="header__nav dots_none">
+      <ul class="header__nav common-no-list">
           <li class="header__item">
-            <a href="/" class="header__link">My blog</a>
+            <a href="../../pages/blog/index.html" class="button button_link">My blog</a>
           </li>
           <li class="header__item">
             @@include('button/index.html', {
-              "class":"button__link button_sign-js",
+              "class":"button button_link button_sign-js",
               "type":"button",
-              "text": "Sign in"
+              "text": "Sign in",
+              "form":"sign"
             })
           </li>
           <li class="header__item">
             @@include('button/index.html', {
-              "class":"button__link button_register-js",
+              "class":"button button_link button_register-js",
               "type":"button",
-              "text": "Register"
+              "text": "Register",
+              "form":"register"
             })
           </li>
           <li class="header__item header__item_hidden">
-            <a href="../../pages/profile/index.html" class="header__link header__link_hidden">My profile</a>
+            <a href="../../pages/profile/index.html" class="button button_link">My profile</a>
           </li>
       </ul>
   </nav>

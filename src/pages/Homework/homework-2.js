@@ -13,15 +13,16 @@ let num = +prompt('Введите число');
 let number = Number(num);
 
 if (Number.isNaN(num)) {
-  console.error('Это не число, попробуйте еще раз!');
+    console.error('Это не число, попробуйте еще раз!');
 } else {
-  for(let i = 1; i < num; i++) {
-      if(i === num) {
-          break;
-      } else if ((i % 4) === 0) {
-          continue;
-      } console.log(i);
-  }
+    for (let i = 1; i < num; i++) {
+        if (i === num) {
+            break;
+        } else if ((i % 4) === 0) {
+            continue;
+        } 
+        console.log(i);
+    }
 }
 
 // Написать программу, которая будет получать число и с
@@ -62,12 +63,12 @@ let num2 = +prompt('введите степень для этого числа')
 let degree;
 
 if (Number.isNaN(num1) || Number.isNaN(num2)) {
-			console.error('Это не число, введите число');
+	console.error('Это не число, введите число');
 }
 for (i = 1; i <= num2; i++) {
-	degree = num1 ** num2;
+	degree = Math.pow(num1, num2);
 	if (i === num2) {
-			console.log(`число ${num1} в степени ${num2} равно ${degree}`);
+		console.log(`число ${num1} в степени ${num2} равно ${degree}`);
 	}
 }
 
@@ -80,18 +81,19 @@ for (i = 1; i <= num2; i++) {
 // использовать пустой for или while(true).
 
 
-let rand = Math.floor(1+Math.random() * 10);
+let rand = Math.floor(1 + Math.random() * 10);
 let num;
 
-while(true) {
-	num = prompt('введите число от 1 до 10');
-	if (num == rand) {
+while (true) {
+	num = +prompt('введите число от 1 до 10');
+	if (num === rand) {
 			alert('Это победа!'); 
 			break;
-	} else if(num === null) {
+	} else if (num === null) {
 			alert('Возвращайтесь поскорее!');
 			break;
 	} else {
-			alert('В следующий раз повезет!')
+			alert('В следующий раз повезет!');
+            break;
 	}
 }

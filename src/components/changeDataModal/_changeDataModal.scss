@@ -1,25 +1,7 @@
 .popup {
-    &__change-data {
+    
+    &_change-data {
         max-width: 680px;
         width: 100%;
-    }
-    &_open {
-        display: block;
-    }
-}
-
-.change-data {
-    &__column {
-        max-width: 600px;
-        width: 100%;
-    }
-    &__label {
-        @include font-size(14px,16px,500);
-        margin: 0 0 6px 0;
-        display: inline-block;
-        &_wrapper {
-            @include font-size(18px,21px,500);
-            margin-left: 10px;
-        }
     }
 }

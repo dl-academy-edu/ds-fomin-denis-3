@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../../static/fonts/gilroy.css"/>
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <title>My blog</title>
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main class="container">
+      <section class="blog">
+        <h1 class="blog__title">My blog</h1>
+      </section>
+      @@include('Filter/index.html')
+      @@include('preloader/index.html')
+      @@include('Posts/index.html')
+      @@include('Pagination/index.html')
+    </main>
+    @@include('footer/index.html')
+    @@include('overlay/index.html')
+    @@include('signInModal/index.html')
+    @@include('registerModal/index.html')
+    @@include('buttonToTop/index.html')
+    <script src="scripts.js"></script>
+    <script src="./../js/buttonToTop.js"></script>
+  </body>
+  
+</html>
