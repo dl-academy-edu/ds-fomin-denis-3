@@ -70,4 +70,25 @@
             }
         }
     }
+
+    &_inValid {
+        background-color: $white;
+        color: $required;
+
+        &:hover,
+        &:focus {
+            background-color: $required;
+            color: $white;
+        }
+    }
+    &_valid {
+        background-color: $white;
+        color: $malachite;
+
+        &:hover,
+        &:focus {
+            background-color: $malachite;
+            color: $white;
+        }
+    }
 }

@@ -11,10 +11,11 @@
         display: flex;
     }
     
-    &__img {
-        min-width: 320px;
-        min-height: 450px;
-        background: $sand url(../../static/images/no-photo.svg) no-repeat center;
+    &__img-container {
+        background-position: center;
+        background-size: cover;
+        width: 320px;
+        height: 450px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
         margin: 0 105px 0 0;
     }

@@ -6,23 +6,28 @@
         <rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)" fill="#828282"/>
       </svg>
     </button>
-    <form action="https://echo.htmlacademy.ru" method="get" class="form form_sign-js" name="signIn">
+    <!-- action="https://echo.htmlacademy.ru" method="get" -->
+    <form class="form form_sign-js" name="signInForm">
         <div class="form__fieldset">
             <div class="form__column">
                 <label for="sign_email" class="form__label">Email<span class="form__required"> *</span></label>
                 <input id="sign_email" class="form__input" type="email" name="email">
-                <div class="form__alert form__alert_warning hidden">Please enter a valid email address (your entry is not in the format "somebody@example.com")</div>
-                <div class="form__alert form__alert_excellent hidden">All right</div>
             </div>
         </div>
         <div class="form__fieldset">    
             <div class="form__column">
                 <label for="sign_password" class="form__label">Password<span class="form__required"> *</span></label>   
                 <input id="sign_password" class="form__input" type="password" name="password">
-                <div class="form__alert form__alert_warning hidden">This field is required</div>
-                <div class="form__alert form__alert_excellent hidden">All right</div>
             </div>
         </div>
-        <button type="submit" class="button button_form">Log in</button>
+        <!-- <button type="submit" class="button button_form button-signIn-js">Log in</button> -->
+        @@include('button/index.html', {
+            "text":"Log in",
+            "type":"submit",
+            "class":"button button_form button-signIn-js"
+        })
+        @@include('preloader/index.html', {
+            "class":"signIn-preloader-js"
+        })
     </form>
 </div>

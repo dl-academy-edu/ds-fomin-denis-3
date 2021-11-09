@@ -67,6 +67,16 @@ input[type=number]::-webkit-inner-spin-button {
             height: 150px;
             resize: none;
         }
+
+        &_inValid {
+            border: 2px solid $required;
+        }
+
+        &_valid,
+        &_valid:hover,
+        &_valid:focus {
+            border: 2px solid $malachite;
+        }
     }
     
     &__label {
@@ -111,50 +121,57 @@ input[type=number]::-webkit-inner-spin-button {
     &__checkbox {
 
         &_input {
-        display: none;
+            display: none;
         }
-    }    
-
-    &__checkbox {
 
         &_label {
         position: relative;
         padding: 0 0 0 38px;
         color: $mercury;
 
-        &::before {
-            content: '';
-            position: absolute;
-            display: block;
-            border: 2px solid $mercury;
-            border-radius: 3px;
-            width: 17px;
-            height: 17px;
-            top: -3px;
-            left: 0;
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                border: 2px solid $mercury;
+                border-radius: 3px;
+                width: 19px;
+                height: 19px;
+                top: -3px;
+                left: 0;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                cursor: pointer;
+                width: 14px;
+                height: 14px;
+                background: url(../../static/images/check.svg) no-repeat;
+                opacity: 0;
+                top: -1px;
+                left: 3px;
+            }
+
+            &:hover {
+                color: $gray;
+            }
+            &:checked {
+                color: $black;
+            }
+        }
+        &_input:checked + &_label {
+            color: $black;
         }
 
-        &::after {
-            content: '';
-            position: absolute;
-            display: block;
-            cursor: pointer;
-            width: 14px;
-            height: 14px;
-            background: url(../static/images/check.svg) no-repeat;
-            opacity: 0;
-            top: -1px;
-            left: 5px;
+        &_input:checked + &_label:before {
+            border-color: $black;
         }
 
-        &:hover {
-            color: $gray;
-        }
-    }
-
-    &_input:checked + &_label:after,
-    &_label:before {
-        opacity: 1;
+        &_input:checked + &_label:after,
+        &_label:before {
+            opacity: 1;
         }
     }
 
@@ -180,23 +197,22 @@ input[type=number]::-webkit-inner-spin-button {
         }
     }
 
-    
-
     &__required {
         color: $required;
     }
 
-    &__alert {
+    &__alert-warning {
+        color: $required;
         font-size: 14px;
         line-height: calc(16 / 14);
+        margin: 10px 0 0 0;
+    }
 
-        &_warning{
-            color: $required;
-        }
-
-        &_excellent {
-            color: $malachite;
-        }
+    &__alert-excellent {
+        color: $malachite;
+        font-size: 14px;
+        line-height: calc(16 / 14);
+        margin: 10px 0 0 0;
     }
 }
 

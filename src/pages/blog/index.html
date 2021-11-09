@@ -15,17 +15,19 @@
         <h1 class="blog__title">My blog</h1>
       </section>
       @@include('Filter/index.html')
-      @@include('preloader/index.html')
       @@include('Posts/index.html')
       @@include('Pagination/index.html')
+      @@include('preloader/index.html', {
+        "class": "filter-preloader-js"
+      })
     </main>
     @@include('footer/index.html')
     @@include('overlay/index.html')
     @@include('signInModal/index.html')
     @@include('registerModal/index.html')
+    @@include('sendMessageModal/index.html')
     @@include('buttonToTop/index.html')
     <script src="scripts.js"></script>
-    <script src="./../js/buttonToTop.js"></script>
   </body>
   
 </html>

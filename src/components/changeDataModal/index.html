@@ -6,7 +6,7 @@
         <rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)" fill="#828282"/>
       </svg>
     </button>
-    <form action="https://echo.htmlacademy.ru" method="get" class="form form_change-data-js">
+    <form name="changeDataForm" class="form form_change-data-js">
         <div class="form__fieldset form__column_large">
             <label for="change_email" class="form__label">Email</label>
             <input id="change_email" class="form__input" type="email" name="email">
@@ -40,15 +40,18 @@
                         <path d="M4.375 2.25C3.34106 2.25 2.5 3.09106 2.5 4.125C2.5 5.15893 3.34106 6 4.375 6C5.40893 6 6.25 5.15893 6.25 4.125C6.25 3.09106 5.40893 2.25 4.375 2.25ZM4.375 4.75C4.0304 4.75 3.75 4.4696 3.75 4.125C3.75 3.7804 4.0304 3.5 4.375 3.5C4.7196 3.5 5 3.7804 5 4.125C5 4.4696 4.7196 4.75 4.375 4.75Z" fill="#070707"/>
                         <path d="M14.6399 9.46692C14.6381 9.46509 14.6363 9.46313 14.6344 9.4613C14.339 9.16382 13.9461 9 13.5279 9C13.1109 9 12.719 9.16284 12.424 9.45862L11.2173 10.6488C10.9716 10.8911 10.9689 11.2869 11.2113 11.5326C11.4536 11.7783 11.8494 11.7811 12.0951 11.5387L12.9029 10.7421V14.25C12.9029 14.5952 13.1826 14.875 13.5279 14.875C13.8731 14.875 14.1529 14.5952 14.1529 14.25V10.7611L14.9259 11.5597C15.0485 11.6864 15.2117 11.75 15.375 11.75C15.5316 11.75 15.6884 11.6915 15.8097 11.5741C16.0578 11.334 16.0641 10.9384 15.824 10.6903L14.6399 9.46692Z" fill="#070707"/>
                     </svg>
-                    <span>Choose a file...</span>
+                    <span class="innerText">Choose a file...</span>
                 </label>
-                <input id="change_profile-img" class="form__input common-visually-hidden" type="file" name="img">
+                <input id="change_profile-img" class="form__input common-visually-hidden" type="file" name="avatar">
             </div>
         </div>
         @@include('button/index.html', {
             "text":"Submit changes",
             "type":"submit",
-            "class":"button button_form"
+            "class":"button button_form button-change-data-js"
+        })
+        @@include('preloader/index.html', {
+            "class": "change-data-preloader-js"
         })
     </form>
 </div>
