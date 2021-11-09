@@ -1,0 +1,98 @@
+@import "./variables";
+@import "./normalize";
+
+html {
+	box-sizing: border-box;
+}
+  
+*, 
+*::before, 
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+  	font-family: "Gilroy", $default-sans-serif;
+	font-style: normal;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: calc(21 / 18);
+	color: $black;
+}
+
+img {
+	display: block; 
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+}
+
+h1 {
+	font-size: 47px;
+	font-weight: bold;
+	line-height: calc(57 / 47);
+}
+
+h2 {
+	font-size: 34px;
+	font-weight: bold;
+	line-height: calc(41 / 34);
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: calc(29 / 24);
+}
+
+.common-no-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.common-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    outline: 0;
+    outline-offset: 0;
+}
+
+.common-hidden {
+	display: none;
+}
+
+// Подключение компонентов
+
+@import "./css/container";
+@import "./css/popupAndForm";
+@import "./header/header";
+@import "./footer/footer";
+@import "./button/button";
+@import "./overlay/overlay";
+@import "./signInModal/signInModal";
+@import "./registerModal/registerModal";
+@import "./sendMessageModal/sendMessageModal";
+@import "./buttonToTop/buttonToTop";
+@import "./changePasswordModal/changePasswordModal";
+@import "./changeDataModal/changeDataModal";
+@import "./Filter/Filter";
+@import "./Pagination/Pagination";
+@import "./Posts/Posts";
+@import "./404/404";
+@import "./preloader/preloader"
+
+
+
+

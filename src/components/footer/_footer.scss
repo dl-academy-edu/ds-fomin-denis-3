@@ -1,0 +1,49 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+
+    &__title {
+        margin: 0 0 20px ;
+    }
+
+    &__description {
+        color: $black;
+        font-weight: 500;
+        max-width: 272px;
+        margin: 0 0 30px;
+        text-align: center;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 350px;
+        margin: 0 0 35px;
+    }
+    &__item {
+        margin-bottom: 35px;
+        margin-right: 10px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: calc(16 / 14);
+        text-align: center;
+        color: $gray;
+        margin: 5px 0 0;
+
+        &_wrapper {
+            border-bottom: 1px dashed $gray;
+            transition: color $transition;
+            
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid $black;
+                color: $black;
+            }
+        }
+    }
+}

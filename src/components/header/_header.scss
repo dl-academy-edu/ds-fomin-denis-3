@@ -1,0 +1,44 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 33px;
+    padding-bottom: 32px;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+        background-color: $gray;
+        max-width: 1000px;
+        width: 100%;
+    }
+
+    &__logo {
+        color: $black;
+        font-weight: bold;
+        outline: none;
+        transition: color $transition;
+
+        &:hover,
+        &:focus {
+            color: $gray;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    &__item {
+        margin: 0 0 0 20px;
+    }
+}
+

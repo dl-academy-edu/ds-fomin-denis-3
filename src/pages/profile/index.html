@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../../static/fonts/gilroy.css"/>
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <title>Главная</title>
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main class="container">
+      <section class="profile">
+        <h1 class="profile__title">My profile</h1>
+        <div class="profile__info">
+          <div class="profile__img-container user-img-js">
+          </div>
+          <div class="profile__data">
+              <ul class="profile__items common-no-list">
+                  <li class="profile__item">Name: <span class="profile__wrapper user-name-js"></span></li>
+                  <li class="profile__item">Surname: <span class="profile__wrapper user-surname-js"></span></li>
+                  <li class="profile__item">Email: <span class="profile__wrapper user-email-js"></span></li>
+                  <li class="profile__item">Password: <span class="profile__wrapper user-password-js"></span></li>
+                  <li class="profile__item">Location: <span class="profile__wrapper user-location-js"></span></li>
+                  <li class="profile__item">Age: <span class="profile__wrapper user-age-js"></span></li>
+              </ul>
+              @@include('button/index.html', {
+                  "class":"button button_profile button_change-pass-js",
+                  "type":"button",
+                  "text": "Change password"
+              })
+              @@include('button/index.html', {
+                  "class":"button button_profile button_change-data-js",
+                  "type":"button",
+                  "text": "Change other data"
+              })
+              @@include('button/index.html', {
+                  "class":"button button_profile button-delete-js",
+                  "type":"button",
+                  "text": "Delete account"
+              })
+              @@include('button/index.html', {
+                "class":"button button-signOut-js",
+                "type":"button",
+                "text": "Sign Out"
+            })
+          </div>
+        </div>
+        @@include('preloader/index.html', {
+          "class": "main-preloader-js"
+        })
+      </section>
+    </main>
+    @@include('overlay/index.html')
+    @@include('signInModal/index.html')
+    @@include('registerModal/index.html')
+    @@include('changePasswordModal/index.html')
+    @@include('changeDataModal/index.html')
+    <script src="scripts.js"></script>
+  </body>
+</html>
