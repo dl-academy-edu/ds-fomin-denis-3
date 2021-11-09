@@ -13,7 +13,6 @@ const requiredSendMessage = sendMessageForm.elements.required;
 const buttonRegister = registerForm.querySelector('.button-reg-js');
 const buttonSignIn = signInForm.querySelector('.button-signIn-js');
 const buttonSendMessage = sendMessageForm.querySelector('.button-sendMessage-js');
-
 updateHeaderLinks();
 
 // Вход пользователя
@@ -240,8 +239,7 @@ window.addEventListener('keydown', function () {
     let slideWidth = +getComputedStyle(wrapper).width.split("px")[0];  
     let numberSlides = container.childElementCount - 1;
     let activeSlide = 0; 
-
-
+    localStorage.getItem("activeSlide", 0);
     if (!localStorage.getItem('activeSlide')) {
         changeToSlide(activeSlide);
     } else {

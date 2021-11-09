@@ -64,7 +64,7 @@ function getProfile() {
         profile = response.data
         renderProfile();
         closePreloader(preloader);
-        history.replaceState(null, document.title, '?' + 'id:' + localStorage.getItem('userId'));
+        //history.replaceState(null, document.title, '?' + 'id:' + localStorage.getItem('userId'));
     })
     .catch(err => {
         alert(err);
